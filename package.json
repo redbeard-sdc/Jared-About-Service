@@ -1,0 +1,58 @@
+{
+  "name": "jared-about-service",
+  "version": "1.0.0",
+  "description": "About module for rickadvisor app",
+  "author": "Jared Brink",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run react-dev\" \"npm run server-dev\"",
+    "react-dev": "webpack --mode production --watch",
+    "server-dev": "nodemon server/index.js",
+    "seed": "node database/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "mongoose": "^5.4.20",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "main": "index.js",
+  "keywords": []
+}
