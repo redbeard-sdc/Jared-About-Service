@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 const faker = require ('faker');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:3000/hotels');
+mongoose.connect('mongodb://localhost/hotels');
 
 const db = mongoose.connection;
 
@@ -13,16 +13,27 @@ db.once('open', function() {
 // METHODS FOR SERVER ROUTES
 const getAllHotels = () => {
   return new Promise((resolve, reject) => {
-    db.hotels.find((err, results) => {
+    Hotel.find((err, results) => {
       if(err) {
         reject(err)
       } else {
         resolve(results)
       }
-    });
+    })
   });
 };
 
+const getHotel = (name) => {
+  return new Promise((resolve, reject) => {
+    Hotel.find({hotel_name: name}, (err, results) =>{
+      if(err){
+        reject(err)
+      } else {
+        resolve(results)
+      }
+    })
+  });
+};
 
 // METHODS FOR GENERATING FAKE DATA
 const hotelNameGenerator = () => {
@@ -30,7 +41,6 @@ const hotelNameGenerator = () => {
   let suffixes = ['Inn', 'Lodge', 'Hotel', 'Resort', 'Suites'];
   let randomIndex = Math.floor(Math.random() * suffixes.length); 
   let hotelName = '' + cityName + ' ' + suffixes[randomIndex];
-  console.log(hotelName);
   return hotelName;
 }
 
@@ -171,7 +181,6 @@ for (let i = 0; i < 99; i++) {
 
   let [cleanlinessRating, locationRating, overallRating, serviceRating, valueRating] = [getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings()];
 
-
   const hotel = new Hotel({
     _id: new mongoose.Types.ObjectId(),
     hotel_name: hotelName,
@@ -197,7 +206,8 @@ for (let i = 0; i < 99; i++) {
 }
 
 
-
+module.exports.getAllHotels = getAllHotels;
+module.exports.getHotel = getHotel;
 
 
 

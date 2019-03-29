@@ -6,11 +6,18 @@ const database = require('../database/index.js')
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/hotels', (req, res) => {
+app.get('/hotels/', (req, res) => {
   database.getAllHotels()
-  .then((results => results.json()))
-  .then((data) => {
-    res.json(data)
+  .then((results) => {
+    res.json(results)
+  })
+  .catch(console.log)
+})
+
+app.get('/hotels/:name', (req, res) => {
+  database.getHotel(req.params.name)
+  .then((results) => {
+    res.json(results)
   })
 })
 
