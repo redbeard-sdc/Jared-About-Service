@@ -1,29 +1,73 @@
+/* eslint-disable space-infix-ops */
 import React from 'react';
 import { Component } from 'react';
-import Header from '../header/header.jsx';
+import Header from '../header/Header.jsx';
+import styles from './index.css';
+import AmenitiesList from '../AmenitiesList/AmenitiesList.jsx';
+import RoomFeaturesList from '../RoomFeaturesList/RoomFeaturesList.jsx';
+import GoodToKnowList from '../GoodToKnowList/GoodToKnowList.jsx';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hotel: {
-        name: 'Stanley Hotel'
-      }
+      ratings: {},
+      amenities: [],
+      roomFeatures: [],
+      hotelStyle: [],
+      photos: [],
+      id: '',
+      hotelName: '',
+      hotelClass: 0,
+      hotelLink: '',
+      about: ''
+    
     };
+    this.getHotel = this.getHotel.bind(this);
+  }
+  
+  componentDidMount() {
+    this.getHotel();
   }
 
   getHotel() {
-    fetch('http://localhost:3000/hotels/Stanly%20Hotel', () => {
-
-    });
+    fetch('http://localhost:3000/hotels/Gretashire%20Suites')
+      .then(response => response.json())
+      .then(data => {
+        const hotelData = data[0];
+        this.setState({
+          ratings: hotelData.ratings,
+          amenities: hotelData.hotel_amenities,
+          roomFeatures: hotelData.room_features,
+          hotelStyle: hotelData.hotel_style,
+          photos: hotelData.photos,
+          id: hotelData._id,
+          name: hotelData.hotel_name,
+          hotelClass: hotelData.hotel_class,
+          hotelLink: hotelData.hotel_link,
+          about: hotelData.about
+        });
+      });
   }
+  
   render() {
     return (
-      <div>
+      <div className={styles.app}>
         <Header/>
+        <div>
+          <h5>Amenities</h5>
+          <AmenitiesList amenities={this.state.amenities}/>
+        </div>
+        <div>
+          <h5>Room Features</h5>
+          <RoomFeaturesList features={this.state.roomFeatures}/>
+        </div>
+        <div>
+          <GoodToKnowList hotelClass={this.state.hotelClass} hotelStyle={this.state.hotelStyle}/>
+        </div>
       </div>
     );
-  }
+  } 
 }
 
 export default App;

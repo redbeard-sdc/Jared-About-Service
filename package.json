@@ -17,9 +17,11 @@
     "test:coverage": "jest --coverage --colors"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
+    "identity-obj-proxy": "^3.0.0",
     "mongoose": "^5.4.20",
     "react": "^16.8.5",
     "react-dom": "^16.8.5"

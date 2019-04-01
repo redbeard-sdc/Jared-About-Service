@@ -1,0 +1,16 @@
+.header {
+  display: block;
+  background-color: aquamarine;
+  width: 763.328px;
+  height: 32px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+h2 {
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  color: #000a12;;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0px;
+}

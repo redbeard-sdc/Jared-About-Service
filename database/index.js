@@ -51,63 +51,63 @@ const hotelSchema = mongoose.Schema({
 const Hotel = mongoose.model('Hotel', hotelSchema);
 
 // SCRIPT FOR SEEDING DB
-for (let i = 0; i < 99; i++) {
-  let hotelName = hotelNameGenerator();
-  let hotelAmenities = generateAmenities();
-  let roomFeatures = generateRoomFeatures();
-  let hotelStyle = generateHotelStyle();
-  let hotelClass = Math.floor(Math.random() * (6 - 1) + 1);
-  let hotelLink = 'Visit Hotel Website';
-  let about = `
-  At vero eos et accusamus et iusto odio dignissimos ducimus qui 
-  blanditiis praesentium voluptatum deleniti atque corrupti quos 
-  dolores et quas molestias excepturi sint occaecati cupiditate non 
-  provident, similique sunt in culpa qui officia deserunt mollitia 
-  animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis 
-  est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-  eligendi optio cumque nihil impedit quo minus id quod maxime placeat 
-  facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
-  Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-  saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
-  Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
-  voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.`;
-  let photoURLS = [
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley0.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley1.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley2.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley3.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley4.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley5.jpg',
-    'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley7.jpg'
-  ];
+// for (let i = 0; i < 99; i++) {
+//   let hotelName = hotelNameGenerator();
+//   let hotelAmenities = generateAmenities();
+//   let roomFeatures = generateRoomFeatures();
+//   let hotelStyle = generateHotelStyle();
+//   let hotelClass = Math.floor(Math.random() * (6 - 1) + 1);
+//   let hotelLink = 'Visit Hotel Website';
+//   let about = `
+//   At vero eos et accusamus et iusto odio dignissimos ducimus qui 
+//   blanditiis praesentium voluptatum deleniti atque corrupti quos 
+//   dolores et quas molestias excepturi sint occaecati cupiditate non 
+//   provident, similique sunt in culpa qui officia deserunt mollitia 
+//   animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis 
+//   est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+//   eligendi optio cumque nihil impedit quo minus id quod maxime placeat 
+//   facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+//   Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
+//   saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+//   Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+//   voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.`;
+//   let photoURLS = [
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley0.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley1.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley2.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley3.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley4.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley5.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley7.jpg'
+//   ];
 
-  let [cleanlinessRating, locationRating, overallRating, serviceRating, valueRating] = [getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings()];
+//   let [cleanlinessRating, locationRating, overallRating, serviceRating, valueRating] = [getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings()];
 
-  const hotel = new Hotel({
-    _id: new mongoose.Types.ObjectId(),
-    hotel_name: hotelName,
-    hotel_amenities: hotelAmenities,
-    room_features: roomFeatures,
-    hotel_style: hotelStyle,
-    hotel_class: hotelClass,
-    hotel_link: hotelLink,
-    about: about,
-    photos: photoURLS,
-    ratings: {
-      overall: overallRating,
-      location: locationRating,
-      cleanliness: cleanlinessRating,
-      service: serviceRating,
-      value: valueRating 
-    }
-  });
+//   const hotel = new Hotel({
+//     _id: new mongoose.Types.ObjectId(),
+//     hotel_name: hotelName,
+//     hotel_amenities: hotelAmenities,
+//     room_features: roomFeatures,
+//     hotel_style: hotelStyle,
+//     hotel_class: hotelClass,
+//     hotel_link: hotelLink,
+//     about: about,
+//     photos: photoURLS,
+//     ratings: {
+//       overall: overallRating,
+//       location: locationRating,
+//       cleanliness: cleanlinessRating,
+//       service: serviceRating,
+//       value: valueRating 
+//     }
+//   });
   
-  hotel.save(function (err) {
-    if (err) {
-      return handleError(err);
-    }
-  });
-}
+//   hotel.save(function (err) {
+//     if (err) {
+//       return handleError(err);
+//     }
+//   });
+// }
 
 module.exports.getAllHotels = getAllHotels;
 module.exports.getHotel = getHotel;
