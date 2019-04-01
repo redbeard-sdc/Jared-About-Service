@@ -1,16 +1,24 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import findByTestAttr from './header/header.test';
+import App from './App/App';
 
-import App from './index'
-
-function setup() {
-  const wrapper = shallow(<App/>);
+const setUp = (props = {}) => {
+  const wrapper = shallow(<App {...props}/>);
   return wrapper;
-}
+};
+
 
 describe('App test suite', () => {
-  it('should display a welcome message', () => {
-    const wrapper = setup();
-    expect(wrapper.find('Welcome').exists()).toBe(true);
-  })
-})
+  
+  let component;
+  beforeEach(() => {
+    component = setUp();
+  });
+
+  it('should hold all hotel data in state', () => {
+    expect(component.state().hotel.name).toBe('Stanley Hotel');
+  });
+});
+
+
