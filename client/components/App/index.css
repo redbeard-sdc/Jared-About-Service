@@ -1,6 +1,43 @@
 .app {
-  background-color: blue;
-  height: 813.359px;
-  width: 891.582px;
+  display: block;
+  flex-direction: column;
+  height: 813.33px;
+  width: 889px;
 }
 
+.right {
+  display: block;
+  box-sizing: border-box;
+  width: 393.672px;
+  height: 801px;
+  padding: 12px;
+}
+
+.left {
+  display: block;
+  box-sizing: border-box;
+  width: 393.672px;
+  height: 801px;
+  padding: 12px;
+}
+
+.container {
+  display: block;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  border-top: solid 4px #078171;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.column {
+  display: flex;
+  box-sizing: border-box;
+  flex-basis: 0px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 801px;
+  width: 787.328px;
+}

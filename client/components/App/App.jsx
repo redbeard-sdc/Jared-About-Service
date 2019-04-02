@@ -53,17 +53,23 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <Header/>
-        <div>
-          <h5>Amenities</h5>
-          <AmenitiesList amenities={this.state.amenities}/>
-        </div>
-        <div>
-          <h5>Room Features</h5>
-          <RoomFeaturesList features={this.state.roomFeatures}/>
-        </div>
-        <div>
-          <GoodToKnowList hotelClass={this.state.hotelClass} hotelStyle={this.state.hotelStyle}/>
+        <div className={styles.container}>
+          <Header/>
+          <div className={styles.column}>
+            <div className={styles.left}>
+            </div>
+            <div className={styles.right}>
+              <div>
+                <AmenitiesList amenities={this.state.amenities}/>
+              </div>
+              <div>
+                <RoomFeaturesList features={this.state.roomFeatures}/>
+              </div>
+              <div>
+                <GoodToKnowList hotelClass={this.state.hotelClass} hotelStyle={this.state.hotelStyle}/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
