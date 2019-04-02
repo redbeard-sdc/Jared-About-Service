@@ -6,6 +6,7 @@ import styles from './index.css';
 import AmenitiesList from '../AmenitiesList/AmenitiesList.jsx';
 import RoomFeaturesList from '../RoomFeaturesList/RoomFeaturesList.jsx';
 import GoodToKnowList from '../GoodToKnowList/GoodToKnowList.jsx';
+import HotelLink from '../HotelLink/HotelLink.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -67,6 +68,9 @@ class App extends Component {
               </div>
               <div>
                 <GoodToKnowList hotelClass={this.state.hotelClass} hotelStyle={this.state.hotelStyle}/>
+              </div>
+              <div>
+                <HotelLink/>
               </div>
             </div>
           </div>

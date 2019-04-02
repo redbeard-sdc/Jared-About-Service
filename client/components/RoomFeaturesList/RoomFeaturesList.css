@@ -1,10 +1,9 @@
 .container {
-  height: 188px;
   width: 369.672px;
   padding-bottom: 20px;
   border-bottom: solid 1px rgb(229, 229, 229);
   display: block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .heading {
@@ -15,7 +14,7 @@
   width: 369.672;
   display: block;
   color: rgb(44, 44, 44);
-  margin: 16px;
+  margin-bottom: 16px;
 }
 
 .list {

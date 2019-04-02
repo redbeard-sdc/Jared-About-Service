@@ -3,6 +3,9 @@ import RoomFeaturesListItem from '../RoomFeaturesListItem/RoomFeaturesListItem.j
 import styles from './RoomFeaturesList.css';
 
 const RoomFeaturesList = (props) => {
+  if (props.features.length > 8) {
+    props.features = props.features.slice(0, 8);
+  }
   const listItems = props.features.map((feature) => {
     return (
       <RoomFeaturesListItem feature={feature}/>
