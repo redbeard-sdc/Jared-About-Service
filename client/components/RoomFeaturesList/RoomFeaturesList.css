@@ -1,0 +1,26 @@
+.container {
+  height: 188px;
+  width: 369.672px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(229, 229, 229);
+  display: block;
+  padding-bottom: 20px;
+}
+
+.heading {
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 18px;
+  width: 369.672;
+  display: block;
+  color: rgb(44, 44, 44);
+  margin: 16px;
+}
+
+.list {
+  height: 136px;
+  width: 369.672px;
+  display: flex;
+  flex-wrap: wrap;
+}
