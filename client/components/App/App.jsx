@@ -9,6 +9,7 @@ import GoodToKnowList from '../GoodToKnowList/GoodToKnowList.jsx';
 import HotelLink from '../HotelLink/HotelLink.jsx';
 import ReviewScores from '../ReviewScores/ReviewScores.jsx';
 import About from '../About/About.jsx';
+import Photos from '../Photos/Photos.jsx';
 import cx from 'classnames';
 
 class App extends Component {
@@ -66,6 +67,9 @@ class App extends Component {
               </div>
               <div>
                 <About about={this.state.about}/>
+              </div>
+              <div>
+                <Photos photos={this.state.photos}/>
               </div>
             </div>
             <div className='col-sm-6'>

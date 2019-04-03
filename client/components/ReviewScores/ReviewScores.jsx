@@ -4,7 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faDotCircle as faDotCircleRegular, faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons';
 
-const ReviewScores = (props) => {
+// rating is i
+// return  <span className={styles.bubbles}>
+// { new Array (i).map((item) => {
+//   return <FontAwesomeIcon icon={faDotCircleRegular}/>
+//   })
+// }
+// {
+//   new Array(5-1).map((item) => {
+//     return <FontAwesomeIcon icon={faCircleRegular}/>
+//   })
+// }
+//  </span> 
+
+const ReviewScores = (props) => { 
   let bubbleScore1 = (
     <span className={styles.bubbles}>
       <FontAwesomeIcon icon={faDotCircleRegular}/>
