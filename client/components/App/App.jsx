@@ -7,6 +7,8 @@ import AmenitiesList from '../AmenitiesList/AmenitiesList.jsx';
 import RoomFeaturesList from '../RoomFeaturesList/RoomFeaturesList.jsx';
 import GoodToKnowList from '../GoodToKnowList/GoodToKnowList.jsx';
 import HotelLink from '../HotelLink/HotelLink.jsx';
+import ReviewScores from '../ReviewScores/ReviewScores.jsx';
+import cx from 'classnames';
 
 class App extends Component {
   constructor(props) {
@@ -56,10 +58,13 @@ class App extends Component {
       <div className={styles.app}>
         <div className={styles.container}>
           <Header/>
-          <div className={styles.column}>
-            <div className={styles.left}>
+          <div className='row'>
+            <div className='col-sm-6'>
+              <div>
+                <ReviewScores/>
+              </div>
             </div>
-            <div className={styles.right}>
+            <div className='col-sm-6'>
               <div>
                 <AmenitiesList amenities={this.state.amenities}/>
               </div>
@@ -81,3 +86,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+// className={cx("col-sm-6", styles.myClass)}
