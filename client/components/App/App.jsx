@@ -8,6 +8,7 @@ import RoomFeaturesList from '../RoomFeaturesList/RoomFeaturesList.jsx';
 import GoodToKnowList from '../GoodToKnowList/GoodToKnowList.jsx';
 import HotelLink from '../HotelLink/HotelLink.jsx';
 import ReviewScores from '../ReviewScores/ReviewScores.jsx';
+import About from '../About/About.jsx';
 import cx from 'classnames';
 
 class App extends Component {
@@ -62,6 +63,9 @@ class App extends Component {
             <div className='col-sm-6'>
               <div>
                 <ReviewScores ratings={this.state.ratings}/>
+              </div>
+              <div>
+                <About about={this.state.about}/>
               </div>
             </div>
             <div className='col-sm-6'>
