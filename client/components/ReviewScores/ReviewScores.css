@@ -40,3 +40,68 @@
   line-height: 21.6px;
   width: 1891.391px;
 }
+
+.reviewers {
+  border-bottom-color: rgb(214, 214, 214);
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  box-sizing: border-box;
+  color: rgb(74, 74, 74);
+  cursor: pointer;
+  display: inline;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  margin-left: 5px;
+  max-width: 124px;
+  text-align: right;
+  text-decoration-color: rgb(74, 74, 74);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  white-space: nowrap;
+}
+
+.subratings {
+  color: rgb(44, 44, 44);
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  height: 81px;
+  margin-bottom: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  width: 369.672px;
+}
+
+.subs {
+  color: rgb(44, 44, 44);
+  display: flex;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  height: 18px;
+  width: 369.672px;
+}
+
+.bubbles {
+  color: rgb(7, 129, 113);
+}
+
+.type {
+  color: rgb(44, 44, 44);
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  width: 52.9375px;
+}
+
+.subbubs {
+  margin-right: 20px;
+}
