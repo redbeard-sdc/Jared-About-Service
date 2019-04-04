@@ -1,13 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from '../components/App/App';
-// import AmenitiesList from '../components/AmenitiesList/AmenitiesList';
-// import RoomFeaturesList from '../components/RoomFeaturesList/RoomFeaturesList';
-// import GoodToKnowList from '../components/GoodToKnowList/GoodToKnowList';
-// import HotelLink from '../components/HotelLink/HotelLink';
-// import ReviewScores from '../components/ReviewScores/ReviewScores';
-// import About from '../components/About/About';
-// import Photos from '../components/Photos/Photos';
 import { findByTestAttr } from './utils.js';
 import './globalMocks';
 import { faSkiingNordic } from '@fortawesome/free-solid-svg-icons';
