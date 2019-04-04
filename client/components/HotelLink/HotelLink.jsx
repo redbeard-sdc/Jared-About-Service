@@ -14,7 +14,7 @@ const HotelLink = (props) => {
           <span className={styles.desktop}>
             <FontAwesomeIcon icon={faDesktop}/>  
           </span>
-          <span>
+          <span data-test="link-text">
             Visit hotel website
           </span>
           <span>

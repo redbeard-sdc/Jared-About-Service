@@ -9,9 +9,9 @@ const ReviewScores = (props) => {
     let result = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= score) {
-        result.push(<FontAwesomeIcon icon={faDotCircleRegular}/>);
+        result.push(<FontAwesomeIcon key={i} icon={faDotCircleRegular}/>);
       } else {
-        result.push(<FontAwesomeIcon icon={faCircleRegular}/>);
+        result.push(<FontAwesomeIcon key={i} icon={faCircleRegular}/>);
       }
     }
     return result;
@@ -42,7 +42,9 @@ const ReviewScores = (props) => {
       <div className={styles.subratings}>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            {location}
+            <span className={styles.bubbles}> 
+              {location}
+            </span>
           </div>
           <div className={styles.type}>
             Location
@@ -50,7 +52,9 @@ const ReviewScores = (props) => {
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            {cleanliness}
+            <span className={styles.bubbles}> 
+              {cleanliness}
+            </span>
           </div>
           <div className={styles.type}>
             Cleanliness
@@ -58,7 +62,9 @@ const ReviewScores = (props) => {
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            {service}
+            <span className={styles.bubbles}> 
+              {service}
+            </span>
           </div>
           <div className={styles.type}>
             Service
@@ -66,7 +72,9 @@ const ReviewScores = (props) => {
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            {value}
+            <span className={styles.bubbles}> 
+              {value}
+            </span>
           </div>
           <div className={styles.type}>
             Value
