@@ -2,3 +2,6 @@
   margin-top: 40px;
 }
 
+.carousel-indicators li { 
+  visibility: hidden; 
+}

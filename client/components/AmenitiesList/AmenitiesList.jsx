@@ -6,9 +6,9 @@ const AmenitiesList = (props) => {
   if (props.amenities.length > 8) {
     props.amenities = props.amenities.slice(0, 8);
   }
-  const listItems = props.amenities.map((amenity) => {
+  const listItems = props.amenities.map((amenity, index) => {
     return (
-      <AmenitiesListItem amenity={amenity}/>
+      <AmenitiesListItem key={index} amenity={amenity}/>
     );
   });
 

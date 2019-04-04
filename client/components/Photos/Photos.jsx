@@ -5,7 +5,7 @@ import styles from './Photos.css';
 const Photos = (props) => {
   return (
     <div className={styles.container}>
-      <Carousel>
+      <Carousel indicators='false'>
         <Carousel.Item>
           <img
             className="d-block w-100"

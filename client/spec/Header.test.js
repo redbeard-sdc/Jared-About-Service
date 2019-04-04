@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Header from '../components/Header/Header';
 import { findByTestAttr } from './utils.js';
+import './globalMocks';
 
 const setUp = () => {
   const component = shallow(<Header/>);

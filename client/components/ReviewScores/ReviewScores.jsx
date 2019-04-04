@@ -159,7 +159,7 @@ const ReviewScores = (props) => {
     <div>
       <div className={styles.overall}>
         <span className={styles.number}>
-          4.0
+          {props.ratings.overall}.0
         </span>
         <span className={styles.text}>
           <div>
