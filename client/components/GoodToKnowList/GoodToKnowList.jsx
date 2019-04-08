@@ -5,78 +5,40 @@ import { faInfoCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const GoodToKnowList = (props) => {
   const stars = (hotelClass) => {
-    if (hotelClass === 1) {
-      return (
-        <div>
-          <FontAwesomeIcon icon={faStar}/>
-        </div>
+    let result = [];
+    for (let i = 0; i < hotelClass; i++) {
+      result.push(
+        <FontAwesomeIcon key={i} icon={faStar}/>
       );
     }
-    if (hotelClass === 2) {
-      return (
-        <div>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-        </div>
-      );
-    }
-    if (hotelClass === 3) {
-      return (
-        <div>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-        </div>
-      );
-    }
-    if (hotelClass === 4) {
-      return (
-        <div>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-        </div>
-      );
-    }
-    if (hotelClass === 5) {
-      return (        
-        <div>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-          <FontAwesomeIcon icon={faStar}/>
-        </div>
-      );
-    }
+    return result;
   };
 
   return (
     <div className={styles.container}> 
-      <div className={styles.heading}>
+      <div className={styles.heading} data-test="heading-main">
       Good To Know
       </div>
       <div className={styles.list}>
         <div className={styles.left}>
-          <div className={styles.style}>
+          <div className={styles.style} data-test="heading-style">
           HOTEL STYLE
           </div>
           <div>
-            <div className={styles.text}>
+            <div className={styles.text} data-test="hotel-style1">
               {props.hotelStyle[0]}
             </div>
-            <div className={styles.text}>
+            <div className={styles.text} data-test="hotel-style2">
               {props.hotelStyle[1]}
             </div>
           </div>
         </div>
         <div className={styles.right}>
-          <div className={styles.style}>
+          <div className={styles.style} data-test="heading-class">
             HOTEL CLASS
             <span className={styles.span}><FontAwesomeIcon icon={faInfoCircle}/></span>
           </div>
-          <div className={styles.style}>
+          <div className={styles.style} data-test="star-count">
             {stars(props.hotelClass)}
           </div>
         </div>

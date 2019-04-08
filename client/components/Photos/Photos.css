@@ -2,3 +2,53 @@
   margin-top: 40px;
 }
 
+.selected {
+  color: rgb(44, 44, 44);
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  height: 272px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  position: relative;
+  width: 369.672px;
+}
+
+.photolist {
+  color: rgb(44, 44, 44);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  height: 52px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: 1px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  width: 371.672px;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+img {
+  position: absolute;
+}

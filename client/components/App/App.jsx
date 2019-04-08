@@ -26,7 +26,6 @@ class App extends Component {
       hotelClass: 0,
       hotelLink: '',
       about: ''
-    
     };
     this.getHotel = this.getHotel.bind(this);
   }
@@ -74,7 +73,7 @@ class App extends Component {
             </div>
             <div className='col-sm-6'>
               <div>
-                <AmenitiesList amenities={this.state.amenities}/>
+                <AmenitiesList id={this.state.id} amenities={this.state.amenities}/>
               </div>
               <div>
                 <RoomFeaturesList features={this.state.roomFeatures}/>
