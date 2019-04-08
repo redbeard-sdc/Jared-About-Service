@@ -1,0 +1,22 @@
+.wrapper {
+  width: 184.828px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-basis: 50%;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+  display: block;
+  margin-right: 8px;
+}
+
+.text {
+  color: rgb(74, 74, 74);
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 8px;
+}

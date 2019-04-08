@@ -1,0 +1,71 @@
+.container {
+  display: block;
+  width: 369.672px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(229, 229, 229);
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 18px;
+  width: 369.672;
+  display: block;
+  color: rgb(44, 44, 44);
+  margin-bottom: 16px;
+}
+
+.list {
+  width: 369.672px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  margin-bottom: -8;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 172.828px;
+  box-sizing: border-box;
+  display: block;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.style {
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 6px;
+  width: 172.828px;
+  color: rgb(74, 74, 74);
+}
+
+.right {
+  width: 172.828px;
+  box-sizing: border-box;
+  display: block;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.text {
+  display: block;
+  color: rgb(74, 74, 74);
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  flex-grow: 1;
+  font-size: 14px;
+  margin-bottom: 8px;
+  overflow-wrap: break-word;
+  width: 172.828;
+}
+
+.span {
+  margin-left: 8px;
+}
