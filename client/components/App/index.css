@@ -5,6 +5,13 @@
   height: 889px;
 }
 
+.header {
+  display: flex;
+  width: 763.328px;
+  height: 32px;
+  padding-bottom: 18px;
+}
+
 .right {
   display: block;
   box-sizing: border-box;

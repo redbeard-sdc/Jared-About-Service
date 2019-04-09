@@ -1,0 +1,144 @@
+/* The Modal (background) */
+.hidden {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.shown {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 389.688px;
+  width: 716px;
+  background-color:rgb(255, 255, 255);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: block;
+  width: 620px;
+  height: 332px;
+  margin: 48px;
+  margin-top: 10px;
+}
+
+h1 {
+  height: 36px;
+  width: 620px;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.tabs {
+  display: flex;
+  height: 76px;
+  width: 620px;
+}
+
+.selected {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(229, 229, 229);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(229, 229, 229);
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: rgb(7, 129, 113);
+  border-top-style: solid;
+  border-top-width: 3px;
+  color: rgb(0, 10, 18);
+  cursor: pointer;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(0, 10, 18);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-right: 0px;
+}
+
+.unselected {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(229, 229, 229);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(229, 229, 229);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(229, 229, 229);
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: rgb(229, 229, 229);
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: rgb(0, 10, 18);
+  cursor: pointer;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(0, 10, 18);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-right: 0px;
+}
+
+.filler {
+  border-bottom: 1px solid rgb(229, 229, 229);
+  width: 100%;
+}

@@ -23,7 +23,7 @@ const generateAmenities = () => {
     'Conference Facilities', 
     'Meeting rooms', 
     'Multilingual Staff', 'Pool', 
-    'Free High Speed Internet (WiFi)', 
+    'Free Internet', 
     'Breakfast included', 
     'Heated pool', 
     'Hot Tub', 

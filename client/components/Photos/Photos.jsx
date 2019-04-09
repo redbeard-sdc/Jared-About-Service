@@ -1,6 +1,5 @@
 import React from 'react';
 import { Component } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import styles from './Photos.css';
 import IndividualPhoto from '../IndividualPhoto/IndividualPhoto.jsx';
 
@@ -8,11 +7,17 @@ class Photos extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photo: 'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley0.jpg'
+      photo: ''
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleRightArrowClick = this.handleRightArrowClick.bind(this);
     this.handleLeftArrowClick = this.handleLeftArrowClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      photo: 'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley0.jpg'
+    });
   }
 
   handleClick(event) {
@@ -25,17 +30,32 @@ class Photos extends Component {
   handleRightArrowClick(event) {
     const current = this.state.photo;
     const index = this.props.photos.indexOf(current) + 1;
-    this.setState({
-      photo: this.props.photos[index]
-    });
+    console.log(index);
+    if (index <= this.props.photos.length - 1) {
+      this.setState({
+        photo: this.props.photos[index]
+      });
+    }
+    if (index > this.props.photos.length - 1) {
+      this.setState({
+        photo: this.props.photos[0]
+      });
+    }
   }
 
   handleLeftArrowClick(event) {
     const current = this.state.photo;
     const index = this.props.photos.indexOf(current) - 1;
-    this.setState({
-      photo: this.props.photos[index]
-    });
+    console.log(index);
+    if (index < 0) {
+      this.setState({
+        photo: this.props.photos[this.props.photos.length - 1]
+      });
+    } else {
+      this.setState({
+        photo: this.props.photos[index]
+      });
+    }
   }
 
   render() {
@@ -47,10 +67,10 @@ class Photos extends Component {
         <div className={styles.selected}>
           <img src={this.state.photo} height="272" width="369.672"/>
           <div name="right" onClick={this.handleRightArrowClick} className={styles.right}>
-            <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">></a>
+            <a href="#" className="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">></a>
           </div>
           <div name="left" onClick={this.handleLeftArrowClick} className={styles.left}>
-            <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">{'<'}</a>
+            <a href="#" className="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">{'<'}</a>
           </div>
         </div>
         <div className={styles.photolist}>

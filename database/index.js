@@ -78,10 +78,17 @@ const Hotel = mongoose.model('Hotel', hotelSchema);
 //     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley3.jpg',
 //     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley4.jpg',
 //     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley5.jpg',
-//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley7.jpg'
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley6.jpg'
 //   ];
 
-//   let [cleanlinessRating, locationRating, overallRating, serviceRating, valueRating] = [getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings(), getNumberForRatings()];
+//   let [cleanlinessRating, locationRating, serviceRating, valueRating] = [ 
+//     getNumberForRatings(), 
+//     getNumberForRatings(), 
+//     getNumberForRatings(), 
+//     getNumberForRatings()
+//   ];
+
+//   let overallRating = Math.floor((cleanlinessRating + locationRating + serviceRating + valueRating) / 4);
 
 //   const hotel = new Hotel({
 //     _id: new mongoose.Types.ObjectId(),
@@ -109,10 +116,64 @@ const Hotel = mongoose.model('Hotel', hotelSchema);
 //   });
 // }
 
+// const hotel = new Hotel({
+//   _id: new mongoose.Types.ObjectId(),
+//   hotel_name: 'Stanley Hotel',
+//   hotel_amenities: ['Restaurant',
+//     'Free parking',
+//     'Free Internet',
+//     'Bar/Lounge',
+//     'Banquet Room',
+//     'Conference Facilities',
+//     'Meeting rooms',
+//     'Multilingual Staff',
+//     'Non-smoking hotel',
+//     'Pets Allowed',
+//     'Wheelchair access'],
+//   room_features: [
+//     'Accessible rooms',
+//     'Family Rooms',
+//     'Non-smoking rooms',
+//     'Suites'],
+//   hotel_style: ['Great View', 'Charming'],
+//   hotel_class: 4,
+//   hotel_link: 'Visit hotel website',
+//   about: `The Stanley Hotel is a luxurious historic landmark hotel
+//          in a spectacular mountain-view location, offering old-world 
+//          charm matched with the latest of modern amenities. Take a 
+//          ghosts and history tour... Enjoy free wireless Internet access 
+//          throughout the property... Indulge in our full-service spa... 
+//          Experience Cascades Restaurant... Savor a Starbucks’ Coffee... 
+//          Or just relax and enjoy the view from your luxurious room, suite 
+//          or private villa! Come, experience The Stanley Hotel: 7,500 feet 
+//          above the ordinary in beautiful Estes Park, an hour from Denver 
+//          and minutes from Rocky Mountain National Park.The Stanley Hotel 
+//          is a luxurious historic landmark hotel in a spectacular mountain-view 
+//          location, offering old-world charm matched with the latest of modern 
+//          amenities`,
+//   photos: [
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley0.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley1.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley2.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley3.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley4.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley5.jpg',
+//     'https://s3-us-west-1.amazonaws.com/stanleyhotel/Stanley6.jpg'
+//   ],
+//   ratings: {
+//     overall: 4,
+//     location: 4,
+//     cleanliness: 4,
+//     service: 4,
+//     value: 3 
+//   }
+// });
+
+// hotel.save(function (err) {
+//   if (err) {
+//     return handleError(err);
+//   }
+// });
+
 module.exports.getAllHotels = getAllHotels;
 module.exports.getHotel = getHotel;
-
-
-
-
-
