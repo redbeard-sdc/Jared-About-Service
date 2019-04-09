@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Modal.css';
+import AmenitiesListItem from '../AmenitiesListItem/AmenitiesListItem';
+import RoomFeaturesListItem from '../RoomFeaturesListItem/RoomFeaturesListItem';
 
 class Modal extends Component {
   constructor(props) {
@@ -7,10 +9,11 @@ class Modal extends Component {
     this.state = {
       amenities: true
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleTabClick = this.handleTabClick.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
   }
 
-  handleClick(e) {
+  handleTabClick(e) {
     if (e.target.id === 'amenities' && !this.state.amenities || e.target.id === 'features' && this.state.amenities) {
       this.setState(prevState => ({
         amenities: !prevState.amenities
@@ -18,8 +21,20 @@ class Modal extends Component {
     }
   }
 
+  handleButtonClick(e) {
+    this.props.hideModal();
+  }
+
   render() {
-    let display, amenities, roomFeatures;
+    const amenityItems = this.props.amenities.map((amenity, index) => {
+      return <AmenitiesListItem key={index} amenity={amenity} />;
+    });
+
+    const featureItems = this.props.roomFeatures.map((feature, index) => {
+      return <RoomFeaturesListItem key={index} feature={feature} />;
+    });
+
+    let display, amenitiesTab, featuresTab, amenitiesList, featuresList;
     if (this.props.show === false) {
       display = styles.hidden;
     } else {
@@ -27,27 +42,39 @@ class Modal extends Component {
     }
   
     if (this.state.amenities === true) {
-      amenities = styles.selected;
-      roomFeatures = styles.unselected;
+      amenitiesTab = styles.selected;
+      featuresTab = styles.unselected;
+      amenitiesList = styles.shownList;
+      featuresList = styles.hiddenList;
     } else {
-      roomFeatures = styles.selected;
-      amenities = styles.unselected;
+      featuresTab = styles.selected;
+      amenitiesTab = styles.unselected;
+      featuresList = styles.shownList;
+      amenitiesList = styles.hiddenList;
     }
 
     return (
       <div className={display}>
         <div className={styles.modal}>
+          <div onClick={this.handleButtonClick} className={styles.closeButton}>
+          </div>
           <div className={styles.container}>
             <h1>Amenities</h1>
             <div className={styles.tabs}>
-              <span id="amenities"className={amenities} onClick={this.handleClick}>
+              <span id="amenities"className={amenitiesTab} onClick={this.handleTabClick}>
                 Property Amenities
               </span>
-              <span id="features" className={roomFeatures} onClick={this.handleClick}>
+              <span id="features" className={featuresTab} onClick={this.handleTabClick}>
                 Room features
               </span>
               <span className={styles.filler}>
               </span>
+            </div>
+            <div className={amenitiesList}>
+              {amenityItems}
+            </div>
+            <div className={featuresList}>
+              {featureItems}
             </div>
           </div>
         </div>

@@ -75,7 +75,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <Modal show={this.state.show}/>
+        <Modal hideModal={this.hideModal} roomFeatures={this.state.roomFeatures} amenities={this.state.amenities} show={this.state.show}/>
         <div className={styles.container}>
           <div className={styles.header}>
             <Header/>

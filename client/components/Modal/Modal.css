@@ -1,28 +1,27 @@
-/* The Modal (background) */
 .hidden {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .shown {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: block; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .modal {
@@ -62,21 +61,8 @@ h1 {
 }
 
 .selected {
-  background-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(255, 255, 255);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: rgb(229, 229, 229);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: rgb(229, 229, 229);
-  border-right-style: solid;
-  border-right-width: 0px;
+  border: 1px solid rgb(229, 229, 229);
+  border-bottom: none;
   border-top-color: rgb(7, 129, 113);
   border-top-style: solid;
   border-top-width: 3px;
@@ -87,51 +73,24 @@ h1 {
   font-weight: 700;
   line-height: 18px;
   margin-top: 24px;
-  padding-bottom: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 16px;
-  position: relative;
-  text-align: center;
-  text-decoration-color: rgb(0, 10, 18);
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  user-select: none;
+  padding: 16px 12px;
   vertical-align: middle;
   white-space: nowrap;
   margin-right: 0px;
 }
 
 .unselected {
-  background-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(229, 229, 229);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color: rgb(229, 229, 229);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: rgb(229, 229, 229);
-  border-right-style: solid;
-  border-right-width: 0px;
-  border-top-color: rgb(229, 229, 229);
-  border-top-style: solid;
-  border-top-width: 1px;
-  color: rgb(0, 10, 18);
+  background-color: rgb(249, 249, 249);
+  border: 1px solid rgb(229, 229, 229);
+  color: rgb(7, 129, 113);
   cursor: pointer;
   font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
   margin-top: 24px;
-  padding-bottom: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 16px;
-  position: relative;
+  padding: 16px 12px;
   text-align: center;
-  text-decoration-color: rgb(0, 10, 18);
-  text-decoration-line: none;
-  text-decoration-style: solid;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -141,4 +100,52 @@ h1 {
 .filler {
   border-bottom: 1px solid rgb(229, 229, 229);
   width: 100%;
+}
+
+.shownList {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: 204px;
+  width: 620px;
+  margin: 16px;
+}
+
+.hiddenList {
+  display: none;
+}
+
+.closeButton {
+  color: rgb(44, 44, 44);
+  cursor: pointer;
+  display: block;
+  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-size: 16px;
+  height: 48px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  width: 48px;
+  z-index: 1;
+}
+
+.closeButton::before {
+  color: rgb(7, 129, 113);
+  content: "×";
+  display: inline;
+  font-size: 32px;
+  line-height: 48px;
 }

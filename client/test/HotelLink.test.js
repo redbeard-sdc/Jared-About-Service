@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import HotelLink from '../components/HotelLink/HotelLink';
-import { findByTestAttr } from './utils.js.js';
+import { findByTestAttr } from './utils.js';
 import './globalMocks';
 
 describe('HotelLink', () => {

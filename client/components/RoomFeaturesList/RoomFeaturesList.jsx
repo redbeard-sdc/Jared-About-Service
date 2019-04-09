@@ -6,9 +6,9 @@ const RoomFeaturesList = (props) => {
   if (props.features.length > 8) {
     props.features = props.features.slice(0, 8);
   }
-  const listItems = props.features.map((feature) => {
+  const listItems = props.features.map((feature, index) => {
     return (
-      <RoomFeaturesListItem feature={feature}/>
+      <RoomFeaturesListItem key={index} feature={feature}/>
     );
   });
 
