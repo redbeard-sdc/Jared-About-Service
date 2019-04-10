@@ -59,26 +59,63 @@ class Photos extends Component {
 
   render() {
     const photos = this.props.photos.map((photo, index) => {
-      return <IndividualPhoto index={index} key={index} handleClick={this.handleClick} photo={photo}/>;    
+      return (
+        <IndividualPhoto
+          index={index}
+          key={index}
+          handleClick={this.handleClick}
+          photo={photo}
+          style={{
+            filter:
+              this.state.photo === photo
+                ? 'brightness(100%)'
+                : 'brightness(40%)'
+          }}
+        />
+      );
     });
     return (
-      <div>   
+      <div>
         <div className={styles.selected}>
-          <img data-test="photo-selected" src={this.state.photo} height="272" width="369.672"/>
-          <div name="right" onClick={this.handleRightArrowClick} className={styles.right}>
-            <a href="#" className="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">></a>
+          <img
+            data-test="photo-selected"
+            src={this.state.photo}
+            height="272"
+            width="369.672"
+          />
+          <div
+            name="right"
+            onClick={this.handleRightArrowClick}
+            className={styles.right}
+          >
+            <a
+              href="#"
+              className="btn btn-secondary btn-lg disabled"
+              role="button"
+              aria-disabled="true"
+            >
+              >
+            </a>
           </div>
-          <div name="left" onClick={this.handleLeftArrowClick} className={styles.left}>
-            <a href="#" className="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">{'<'}</a>
+          <div
+            name="left"
+            onClick={this.handleLeftArrowClick}
+            className={styles.left}
+          >
+            <a
+              href="#"
+              className="btn btn-secondary btn-lg disabled"
+              role="button"
+              aria-disabled="true"
+            >
+              {'<'}
+            </a>
           </div>
         </div>
-        <div className={styles.photolist}>
-          {photos}
-        </div>
+        <div className={styles.photolist}>{photos}</div>
       </div>
     );
   }
 }
-
 
 export default Photos;

@@ -4,7 +4,7 @@
   display: block;
   flex-basis: calc(14.2757% + -2px);
   flex-shrink: 1;
-  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-size: 16px;
   height: 50px;
   margin-bottom: 1px;
@@ -17,4 +17,8 @@
   padding-top: 0px;
   position: relative;
   width: 51.0469px;
+}
+
+.image:hover {
+  filter: brightness(100%) !important;
 }

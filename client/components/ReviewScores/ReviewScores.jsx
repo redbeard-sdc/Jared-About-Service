@@ -1,22 +1,29 @@
 import React from 'react';
 import styles from './ReviewScores.css';
+import SvgFull from './SvgFull';
+import SvgEmpty from './SvgEmpty.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { faDotCircle as faDotCircleRegular, faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons';
+import {
+  faDotCircle as faDotCircleRegular,
+  faCircle as faCircleRegular
+} from '@fortawesome/free-regular-svg-icons';
 
-const ReviewScores = (props) => { 
-  const getBubbleScore = (score) => {
+const ReviewScores = props => {
+  const getBubbleScore = score => {
     let result = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= score) {
-        result.push(<FontAwesomeIcon key={i} icon={faDotCircleRegular}/>);
+        // result.push(<FontAwesomeIcon key={i} icon={faDotCircleRegular}/>);
+        result.push(<SvgFull />);
       } else {
-        result.push(<FontAwesomeIcon key={i} icon={faCircleRegular}/>);
+        // result.push(<FontAwesomeIcon key={i} icon={faCircleRegular}/>);
+        result.push(<SvgEmpty />);
       }
     }
     return result;
   };
-  
+
   let overall = getBubbleScore(props.ratings.overall);
   let location = getBubbleScore(props.ratings.location);
   let cleanliness = getBubbleScore(props.ratings.cleanliness);
@@ -43,63 +50,42 @@ const ReviewScores = (props) => {
   return (
     <div>
       <div className={styles.overall}>
-        <span className={styles.number}>
-          {props.ratings.overall}.0
-        </span>
+        <span className={styles.number}>{props.ratings.overall}.0</span>
         <span className={styles.text}>
-          <div data-test="descriptor">
-            {descriptor}
-          </div>
+          <div data-test="descriptor">{descriptor}</div>
           {overall}
           <span className={styles.reviewers} data-test="review-count">
             3,184 reviews
-          </span>  
+          </span>
         </span>
       </div>
       <div className={styles.subratings}>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            <span className={styles.bubbles}> 
-              {location}
-            </span>
+            <span className={styles.bubbles}>{location}</span>
           </div>
-          <div className={styles.type}>
-            Location
-          </div>
+          <div className={styles.type}>Location</div>
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            <span className={styles.bubbles}> 
-              {cleanliness}
-            </span>
+            <span className={styles.bubbles}>{cleanliness}</span>
           </div>
-          <div className={styles.type}>
-            Cleanliness
-          </div>
+          <div className={styles.type}>Cleanliness</div>
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            <span className={styles.bubbles}> 
-              {service}
-            </span>
+            <span className={styles.bubbles}>{service}</span>
           </div>
-          <div className={styles.type}>
-            Service
-          </div>
+          <div className={styles.type}>Service</div>
         </div>
         <div className={styles.subs}>
           <div className={styles.subbubs}>
-            <span className={styles.bubbles}> 
-              {value}
-            </span>
+            <span className={styles.bubbles}>{value}</span>
           </div>
-          <div className={styles.type}>
-            Value
-          </div>
+          <div className={styles.type}>Value</div>
         </div>
       </div>
     </div>
-   
   );
 };
 
