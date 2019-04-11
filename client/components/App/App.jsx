@@ -39,8 +39,6 @@ class AboutService extends Component {
   }
 
   showModal(e) {
-    console.log(e);
-    console.log(this.state.show);
     this.setState({
       show: true
     });
