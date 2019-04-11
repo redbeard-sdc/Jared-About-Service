@@ -83,8 +83,8 @@ class AboutService extends Component {
           <div className={styles.header}>
             <Header />
           </div>
-          <div className="row">
-            <div className="col-sm-6">
+          <div className={styles.column}>
+            <div className={styles.left}>
               <div>
                 <ReviewScores ratings={this.state.ratings} />
               </div>
@@ -95,7 +95,7 @@ class AboutService extends Component {
                 <Photos photos={this.state.photos} />
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className={styles.right}>
               <div>
                 <AmenitiesList
                   id={this.state.id}
