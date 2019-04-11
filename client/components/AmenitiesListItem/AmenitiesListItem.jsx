@@ -35,7 +35,7 @@ const AmenitiesListItem = (props) => {
     amenityIcon = faUsers;
     break;
   case 'Multilingual Staff':
-  case 'Free High Speed Internet (WiFi)':
+  case 'Free Internet':
     amenityIcon = faGlobe;
     break;
   case 'Pool':

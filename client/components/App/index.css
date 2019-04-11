@@ -5,6 +5,13 @@
   height: 889px;
 }
 
+.header {
+  display: flex;
+  width: 763.328px;
+  height: 32px;
+  padding-bottom: 18px;
+}
+
 .right {
   display: block;
   box-sizing: border-box;
@@ -28,8 +35,6 @@
   padding-right: 24px;
   padding-top: 24px;
   border-top: solid 4px #078171;
-  margin-left: -12px;
-  margin-right: -12px;
 }
 
 .column {

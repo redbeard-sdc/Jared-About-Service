@@ -18,7 +18,7 @@ const AmenitiesList = (props) => {
       <div className={styles.list}>
         {listItems}
       </div>
-      <div className={styles.show}>
+      <div className={styles.show} onClick={props.showModal}>
       Show more
       </div>
     </div>
