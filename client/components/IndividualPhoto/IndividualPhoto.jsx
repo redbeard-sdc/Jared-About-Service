@@ -9,7 +9,7 @@ const IndividualPhoto = props => {
         src={props.photo}
         height="50"
         width="51.0469"
-        onClick={props.handleClick}
+        onClick={props.handlePhotoClick}
         style={props.style}
         className={styles.image}
       />
