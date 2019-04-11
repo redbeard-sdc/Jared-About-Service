@@ -13,7 +13,7 @@ import Photos from '../Photos/Photos.jsx';
 import Modal from '../Modal/Modal.jsx';
 import cx from 'classnames';
 
-class App extends Component {
+class AboutService extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +33,7 @@ class App extends Component {
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
   }
-  
+
   componentDidMount() {
     this.getHotel();
   }
@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   getHotel() {
-    fetch('http://localhost:3000/hotels/Stanley%20Hotel')
+    fetch('http://localhost:3002/hotels/Stanley%20Hotel')
       .then(response => response.json())
       .then(data => {
         const hotelData = data[0];
@@ -75,45 +75,56 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <Modal hideModal={this.hideModal} roomFeatures={this.state.roomFeatures} amenities={this.state.amenities} show={this.state.show}/>
+        <Modal
+          hideModal={this.hideModal}
+          roomFeatures={this.state.roomFeatures}
+          amenities={this.state.amenities}
+          show={this.state.show}
+        />
         <div className={styles.container}>
           <div className={styles.header}>
-            <Header/>
+            <Header />
           </div>
-          <div className='row'>
-            <div className='col-sm-6'>
+          <div className="row">
+            <div className="col-sm-6">
               <div>
-                <ReviewScores ratings={this.state.ratings}/>
+                <ReviewScores ratings={this.state.ratings} />
               </div>
               <div>
-                <About about={this.state.about}/>
+                <About about={this.state.about} />
               </div>
               <div>
-                <Photos photos={this.state.photos}/>
+                <Photos photos={this.state.photos} />
               </div>
             </div>
-            <div className='col-sm-6'>
+            <div className="col-sm-6">
               <div>
-                <AmenitiesList id={this.state.id} amenities={this.state.amenities} showModal={this.showModal}/>
+                <AmenitiesList
+                  id={this.state.id}
+                  amenities={this.state.amenities}
+                  showModal={this.showModal}
+                />
               </div>
               <div>
-                <RoomFeaturesList features={this.state.roomFeatures}/>
+                <RoomFeaturesList features={this.state.roomFeatures} />
               </div>
               <div>
-                <GoodToKnowList hotelClass={this.state.hotelClass} hotelStyle={this.state.hotelStyle}/>
+                <GoodToKnowList
+                  hotelClass={this.state.hotelClass}
+                  hotelStyle={this.state.hotelStyle}
+                />
               </div>
               <div>
-                <HotelLink/>
+                <HotelLink />
               </div>
             </div>
           </div>
         </div>
       </div>
     );
-  } 
+  }
 }
 
-export default App;
-
+export default AboutService;
 
 // className={cx("col-sm-6", styles.myClass)}

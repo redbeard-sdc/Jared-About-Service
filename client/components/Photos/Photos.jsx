@@ -9,7 +9,7 @@ class Photos extends Component {
     this.state = {
       photo: ''
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handlePhotoClick = this.handlePhotoClick.bind(this);
     this.handleRightArrowClick = this.handleRightArrowClick.bind(this);
     this.handleLeftArrowClick = this.handleLeftArrowClick.bind(this);
   }
@@ -20,7 +20,7 @@ class Photos extends Component {
     });
   }
 
-  handleClick(event) {
+  handlePhotoClick(event) {
     const url = event.target.src;
     this.setState({
       photo: url
@@ -63,7 +63,7 @@ class Photos extends Component {
         <IndividualPhoto
           index={index}
           key={index}
-          handleClick={this.handleClick}
+          handlePhotoClick={this.handlePhotoClick}
           photo={photo}
           style={{
             filter:
