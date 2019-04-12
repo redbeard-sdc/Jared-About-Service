@@ -2,13 +2,13 @@
   display: block;
   flex-direction: column;
   width: 813.33px;
-  height: 889px;
+  border: 1px solid rgb(229, 229, 229);
+  background-color: rgb(255, 255, 255);
 }
 
 .header {
   display: flex;
   width: 763.328px;
-  height: 32px;
   padding-bottom: 18px;
 }
 
@@ -41,6 +41,5 @@
   flex-basis: 0px;
   flex-grow: 1;
   flex-shrink: 1;
-  height: 801px;
   width: 787.328px;
 }
