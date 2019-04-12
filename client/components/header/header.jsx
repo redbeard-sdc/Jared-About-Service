@@ -2,10 +2,10 @@
 import React from 'react';
 import styles from './Header.css';
 
-const Header = (props) => {
+const Header = props => {
   return (
-    <div className={styles.header} data-test='headerComponent'>
-      <h2>About</h2>
+    <div className={styles.header} data-test="headerComponent">
+      <h2 className={styles.h2}>About</h2>
     </div>
   );
 };

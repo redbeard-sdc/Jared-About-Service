@@ -80,6 +80,7 @@ class Photos extends Component {
       <div>
         <div className={styles.selected}>
           <img
+            className={styles.img}
             data-test="photo-selected"
             src={this.state.photo}
             height="272"
