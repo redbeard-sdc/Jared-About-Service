@@ -5,14 +5,14 @@
 }
 
 .heading {
-  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
   height: 18px;
   width: 369.672;
   display: block;
   color: rgb(44, 44, 44);
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .link {
@@ -23,8 +23,13 @@
   flex-wrap: wrap;
   display: block;
   line-height: 18px;
+  margin-right: 6px;
 }
 
-span {
+.text {
+  margin-right: 6px;
+}
+
+.desktop {
   margin-right: 6px;
 }
