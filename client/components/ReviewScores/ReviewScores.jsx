@@ -14,10 +14,8 @@ const ReviewScores = props => {
     let result = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= score) {
-        // result.push(<FontAwesomeIcon key={i} icon={faDotCircleRegular}/>);
         result.push(<SvgFull />);
       } else {
-        // result.push(<FontAwesomeIcon key={i} icon={faCircleRegular}/>);
         result.push(<SvgEmpty />);
       }
     }
