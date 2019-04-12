@@ -5,7 +5,7 @@
 .selected {
   color: rgb(44, 44, 44);
   display: block;
-  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-size: 16px;
   height: 272px;
   margin-bottom: 0px;
@@ -24,7 +24,7 @@
   color: rgb(44, 44, 44);
   display: flex;
   flex-wrap: wrap;
-  font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+  font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-size: 16px;
   height: 52px;
   margin-bottom: -1px;
@@ -49,6 +49,21 @@
   top: 50%;
   left: 0;
 }
+
 img {
   position: absolute;
+}
+
+.arrowButton {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  font-size: 28px;
+  color: white;
+  transition: background-color 200ms ease;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.arrowButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }

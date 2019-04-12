@@ -28,6 +28,7 @@ class Photos extends Component {
   }
 
   handleRightArrowClick(event) {
+    event.preventDefault();
     const current = this.state.photo;
     const index = this.props.photos.indexOf(current) + 1;
     if (index <= this.props.photos.length - 1) {
@@ -43,6 +44,7 @@ class Photos extends Component {
   }
 
   handleLeftArrowClick(event) {
+    event.preventDefault();
     const current = this.state.photo;
     const index = this.props.photos.indexOf(current) - 1;
 
@@ -90,7 +92,7 @@ class Photos extends Component {
           >
             <a
               href="#"
-              className="btn btn-secondary btn-lg disabled"
+              className={styles.arrowButton}
               role="button"
               aria-disabled="true"
             >
@@ -104,7 +106,7 @@ class Photos extends Component {
           >
             <a
               href="#"
-              className="btn btn-secondary btn-lg disabled"
+              className={styles.arrowButton}
               role="button"
               aria-disabled="true"
             >
