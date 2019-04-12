@@ -28,8 +28,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 389.688px;
   width: 716px;
+  height: 448px;
   background-color: rgb(255, 255, 255);
   position: relative;
   top: 50%;
@@ -40,13 +40,12 @@
 .container {
   display: block;
   width: 620px;
-  height: 332px;
+  height: 448px;
   margin: 48px;
   margin-top: 10px;
 }
 
 .h1 {
-  height: 36px;
   width: 620px;
   font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-weight: 700;
@@ -56,7 +55,6 @@
 
 .tabs {
   display: flex;
-  height: 76px;
   width: 620px;
 }
 
@@ -106,7 +104,6 @@
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  height: 204px;
   width: 620px;
   margin: 16px;
 }
@@ -121,7 +118,6 @@
   display: block;
   font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
   font-size: 16px;
-  height: 48px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
