@@ -51,7 +51,7 @@ class AboutService extends Component {
   }
 
   getHotel() {
-    fetch('http://localhost:3002/hotels/Stanley%20Hotel')
+    fetch('/hotels/Stanley%20Hotel')
       .then(response => response.json())
       .then(data => {
         const hotelData = data[0];

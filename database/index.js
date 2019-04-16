@@ -8,7 +8,8 @@ const {
   generateHotelStyle
 } = require('./utils.js');
 
-mongoose.connect('mongodb://localhost/hotels');
+const mongoURI = process.env.DB_URI || 'mongodb://database/hotels';
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 
