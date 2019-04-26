@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:3000'
+  # plugins:
+  #   expect: {}
+  phases:
+    - duration: 5
+      arrivalRate: 1000
+scenarios:
+  - flow:
+    - get:
+        url: "/api/hotel/200000"
+        # expect:
+        #   - statusCode: 200
+        #   - contentType: json

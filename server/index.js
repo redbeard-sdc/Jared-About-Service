@@ -1,29 +1,13 @@
+const nr = require('newrelic');
 const express = require('express');
-const app = express();
-const PORT = 3000;
+const apiRoute = require('../routes/api');
 const path = require('path');
-const database = require('../database/index.js');
-const cors = require('cors');
+const PORT = 3000;
 
-app.use(cors());
-app.use(express.static(path.join(__dirname, '../public')));
+const app = express();
 
-app.get('/hotels', (req, res) => {
-  database
-    .getAllHotels()
-    .then(results => {
-      res.json(results);
-    })
-    .catch(console.log);
-});
-
-app.get('/hotels/:name', (req, res) => {
-  database
-    .getHotel(req.params.name)
-    .then(results => {
-      res.json(results);
-    })
-    .catch(console.log);
-});
+app.use(express.json());
+app.use('/api', apiRoute);
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.listen(PORT);
