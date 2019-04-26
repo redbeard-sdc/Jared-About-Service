@@ -22,7 +22,7 @@ const pool = new Pool({
   database: CONFIG.DATABASE.DATABASE,
   password: CONFIG.DATABASE.PWD,
   port: CONFIG.DATABASE.PORT,
-  max: 30,
+  max: 50,
 });
 
 module.exports = pool;
