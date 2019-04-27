@@ -51,18 +51,18 @@ class AboutService extends Component {
   }
 
   getHotel() {
-    fetch('http://localhost:3000/api/hotel/1')
+    fetch('http://localhost:3001/api/hotel/1')
       .then(response => response.json())
       .then(data => {
-        const hotelData = data[0];
+        const hotelData = data.rows[0];
         this.setState({
-          // ratings: {
-          //   overall: hotelData.overall,
-          //   location: hotalData.location,
-          //   cleanliness: hotelData.cleanliness,
-          //   service: hotelData.service,
-          //   value: hotelData.value
-          // },
+          ratings: {
+            overall: hotelData.overall,
+            location: hotelData.location,
+            cleanliness: hotelData.cleanliness,
+            service: hotelData.service,
+            value: hotelData.value
+          },
           amenities: hotelData.hotel_amenities.split(','),
           roomFeatures: hotelData.room_features.split(','),
           hotelStyle: hotelData.hotel_style.split(','),
@@ -92,7 +92,7 @@ class AboutService extends Component {
           <div className={styles.column}>
             <div className={styles.left}>
               <div>
-                {/* <ReviewScores ratings={this.state.ratings} /> */}
+                <ReviewScores ratings={this.state.ratings} />
               </div>
               <div>
                 <About about={this.state.about} />
