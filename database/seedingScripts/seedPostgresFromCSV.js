@@ -46,7 +46,7 @@ const queryString = `COPY hotel(id,
   cleanliness, 
   service, 
   value) 
-FROM '/Users/ian/ghrden01/Jared-About-Proxy/data.csv' DELIMITER ',' CSV HEADER;`;
+FROM '/Users/ian/ghrden01/Jared-About-Service/database/seedingScripts/data.csv' DELIMITER ',' CSV HEADER;`;
 
 pool.query(sql)
   .then(() => pool.query(queryString));

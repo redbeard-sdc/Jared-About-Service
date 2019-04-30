@@ -51,10 +51,10 @@ class AboutService extends Component {
   }
 
   getHotel() {
-    fetch('http://localhost:3001/api/hotel/1')
+    fetch('https://2mj7sd6epa.execute-api.us-east-2.amazonaws.com/devStage1/api/hotel/2')
       .then(response => response.json())
       .then(data => {
-        const hotelData = data.rows[0];
+        const hotelData = data[0];
         this.setState({
           ratings: {
             overall: hotelData.overall,

@@ -65,3 +65,9 @@ data.csv
 
 # Artillery stress test
 hello.yml
+
+## PG Config
+CONFIG.js
+
+# master.yaml
+master.yaml
