@@ -51,7 +51,7 @@ class AboutService extends Component {
   }
 
   getHotel() {
-    fetch('https://2mj7sd6epa.execute-api.us-east-2.amazonaws.com/devStage1/api/hotel/2')
+    fetch('https://2mj7sd6epa.execute-api.us-east-2.amazonaws.com/devStage1/api/hotel/3')
       .then(response => response.json())
       .then(data => {
         const hotelData = data[0];
