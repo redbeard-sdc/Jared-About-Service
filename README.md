@@ -1,4 +1,4 @@
-# RickAdvisor - a scaleable clone of TripAdvisor 
+# RickAdvisor - a scalable clone of TripAdvisor 
 
 > Provided AWS solutions for backend system. Utilized RDS (PostgreSQL), API Gateway, Lambda, Elasticache.
 
