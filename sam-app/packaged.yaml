@@ -12,7 +12,7 @@ Parameters:
     Default: ian
   DatabasePwd:
     Type: String
-    Default: rhodyhackerdog
+    Default: ###
   DatabaseHost:
     Type: String
     Default: rickadvisor-about-db-replica.c52xkeof6emi.us-east-2.rds.amazonaws.com
